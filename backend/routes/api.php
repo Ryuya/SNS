@@ -17,3 +17,24 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('sample-restful-apis', function()
+{
+    return response()->json([
+        [
+            'name' => 'Therichpost',
+            'domain' => 'therichpost.com'
+        ],[
+            'name' => 'Therichpost',
+            'domain' => 'どれみふぁそらしど.com'
+        ],[
+            'name' => 'Therichpost',
+            'domain' => 'therichpost.com'
+        ],[
+            'name' => 'Therichpost',
+            'domain' => 'therichpost.com'
+        ],[
+            'name' => 'Therichpost',
+            'domain' => 'therichpost.com'
+            ]
+        ]);
+});
